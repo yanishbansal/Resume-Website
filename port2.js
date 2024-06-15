@@ -8,7 +8,12 @@ var LocalStrategy                  =require('passport-local');
 var passportLocalMongoose          =require('passport-local-mongoose'); // here passport mongoose is install to use  =require("./public/models/user.js");
 
 var app=express();
- 
+
+// latest changes were made here , Set the view engine to EJS and the views directory
+const path = require('path');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 app.use(express.static('public'));
 
 app.engine('html', require('ejs').renderFile);
