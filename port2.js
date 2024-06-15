@@ -6,6 +6,8 @@ var user                           =require("./public/models/user.js");
 var passport                       =require('passport');
 var LocalStrategy                  =require('passport-local');
 var passportLocalMongoose          =require('passport-local-mongoose'); // here passport mongoose is install to use  =require("./public/models/user.js");
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 var app=express();
 
@@ -13,8 +15,8 @@ var app=express();
 const path = require('path');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-app.use(express.static('public'));
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine('html', require('ejs').renderFile);
 
@@ -26,7 +28,12 @@ app.use(bp.json());
 app.use(require("express-session")({
  secret: 'yb',
  resave: false,
- saveUninitialized: false
+ saveUninitialized: false,
+ store: MongoStore.create({
+    mongoUrl: 'mongodb+srv://mongodb:mongodb@cluster0.cljzb.mongodb.net/Cluster0?retryWrites=true&w=majority',
+    collectionName: 'sessions',
+    ttl: 14 * 24 * 60 * 60 // Session expiration in seconds (14 days)
+  })
 }));
 app.use(passport.initialize());
 app.use(passport.session());	// Required for persistent login sessions (optional, but recommended)
@@ -160,46 +167,3 @@ app.get('*',(req,res)=>{
 app.listen(process.env.PORT ||'80',()=>{
   console.log("port running babe");
 });
-
-
-
-
-///////////////////// adding database eg
-//var catSchema = new mongoose.Schema({name: String , weapon: String});
-//var cat = mongoose.model("cat",catSchema);
-//new cat({name:'tom', weapon: 'paws'}).save((err,cntnt)=>{
- //console.log(cntnt);  
-//});
-
-// data base ko temp khin bhi js mein bhi and ejs mein bhi 
-
-//.find({name:'tom'},(err,cntnt)=>{console.log(`take thisss ${cntnt}` )});
-// or 
-//cat.find({name:'tom'},(err,cntnt)=>{console.log("take thisss " + cntnt)});
-
-//cat.findById({ "_id":"6001c8a5827ba16f1ca1b4d1"},(err,cntnt)=>{console.log("take thisss " + cntnt)});
- 
-//cat.findById("6001c8a5827ba16f1ca1b4d1",(err,cntnt)=>{console.log("take thisss " + cntnt)});
-
-
-//app.get('/:home',(req,res)=>{	
-//    cat.find({},(err,cntnt)=>{
-//   res.render("cat.ejs",{Cats:cntnt});
-// }); });
-
-
-// IN cat.ejs
-//<% Cats.forEach((Cats)=> { %>
-//<%= Cats.name %>
-//<%= Cats._id %>
-//<% }) %>
-
-
-
-
-
-
-// sementic ui is like bootstrap 
-// { created: {type: Date, default: Date.now}    }
-// .toDateString()
-
