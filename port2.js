@@ -138,7 +138,9 @@ app.post('/register', (req, res) => {
 	user.register(new user({ username: req.body.username }), req.body.password, (err, usercntnt) => {
 		if (err) {
 			console.log(err);
-			return res.render("registerForm.ejs");
+			if (err.name !== 'UserExistsError') {
+				return res.redirect('/register');
+			}
 		}
 		passport.authenticate("local")(req, res, () => { res.redirect('/TodoList'); })	// we could have used twitter google instead of local in pass.auth !!!!
 
