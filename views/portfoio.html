@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<title> Resume </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif
+  }
+
+  .w3-container a {
+    text-decoration: none;
+    color: #009688;
+  }
+
+  /* Custom styles for hovering over links */
+  .w3-container a:hover {
+    text-decoration: underline;
+    color: teal;
+    /* Example: Change color on hover */
+  }
+
+  .left-column {
+    height: 100%;
+  }
+
+  .icon-info {
+    display: flex;
+    gap: 8px;
+
+  }
+
+  .info {
+    word-break: break-all;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 8px;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .project-card {
+    height: 100% !important;
+  }
+
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
+
+<body class="w3-light-grey">
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="grid equal-height">
+
+      <!-- Left Column -->
+      <div class="w3-padding">
+
+        <div class="left-column w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="myImage3.jpeg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+
+            </div>
+          </div>
+          <div class="w3-container">
+
+            <p>
+            <h2>Yanish Bansal</h2>
+            </p>
+            <div class="icon-info"><i class="icon fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <p class="info">Software Developer</p>
+            </div>
+            <div class="icon-info"><i class="icon fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <p class="info">Patiala, Punjab</p>
+            </div>
+            <div class="icon-info"><i class="icon fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <p class="info">yanishbansal56@gmail.com</p>
+            </div>
+            <div class="icon-info"><i class="icon fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <p class="info">7508187451</p>
+            </div>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+
+            <p> Front End </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%"><i>React</i></div>
+            </div>
+
+            <p> API Development </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%"><i>NodeJs, .Net</i></div>
+            </div>
+
+            <p>Database </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%"><i>SQL , MondoDB</i></div>
+            </div>
+
+            <p>Messaging Queues</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%"><i>RabbitMQ</i></div>
+            </div>
+
+            <p>Cloud</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">
+                <i>AWS Certified Cloud Practitioner</i>
+              </div>
+            </div>
+
+            <p>Software Languages </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%"><i>C++ , C# ,
+                  JS , Python , Sql</i></div>
+            </div>
+
+            <p>Problem Solving</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">
+                <i>leetcode.com/ybansal_be19/</i>
+              </div>
+            </div>
+
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i
+                  class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+            <p>English (proficient)</p>
+
+            &#9733; &#9733; &#9733; &#9733;
+            <!--
+                <div class="w3-light-grey w3-round-xlarge">
+                <div class="w3-round-xlarge w3-teal" style="height:23px;width:95%"></div>
+                </div> 
+ -->
+            <p>Hindi (native)</p>
+            <!--
+            <div class="w3-light-grey w3-round-xlarge">
+                <div class="w3-round-xlarge w3-teal" style="height:23px;width:97%"></div>
+            </div>
+          </div> -->
+            &#9733; &#9733; &#9733; &#9733;
+            <br>
+          </div>
+        </div><br>
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-padding">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16">
+            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience
+          </h2>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Developer / Adani Defence & Aerospace</b></h5>
+            <h6 class="w3-text-teal">
+              <i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <span class="w3-tag w3-teal w3-round">Oct 2024</span> -
+              <span class="w3-tag w3-teal w3-round">Feb 2025</span>
+            </h6>
+            <ul>
+              <li>Contributed to algorithmic and software architectural design as a key member of the core design team
+                of Autonomous Unmanned Vessels and Space Surveillance Systems.</li>
+              <li>Co-developed a fire control system algorithm grounded entirely in research literature, and programmed
+                the first proof-of-concept prototype to validate and fine-tune the algorithm’s performance under
+                real-time operational constraints, including hit probability modeling across static and dynamic target
+                profiles and circular error probable values ranging from 1.5 to 6 meters at 0.5–1.5 km engagement
+                ranges.</li>
+            </ul>
+            <hr>
+          </div>
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Developer / Incedo</b></h5>
+            <h6 class="w3-text-teal">
+              <i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <span class="w3-tag w3-teal w3-round">Jan 2023</span> -
+              <span class="w3-tag w3-teal w3-round">Oct 2024</span>
+            </h6>
+            <ul>
+              <li>Served as a Backend Engineer at IncedoPay Payment System, where I was responsible for writing and
+                managing code for Payment, Scheduler, and ReportWorker Services for B2B and Virtual Cards.</li>
+              <li>Received recognition and won multiple prizes for winning in various Incedo internal development
+                hackathons and other events. Also collaborated on an end-to-end shift time allowance system with peers,
+                successfully pitching it to our CDO and Directors.</li>
+              <li>Technologies Used: .NET, RabbitMQ, MySql, C#, XSLT, XSD.</li>
+            </ul>
+            <hr>
+            <h5 class="w3-opacity"><b>Software Development Trainee / Incedo Inc</b></h5>
+            <h6 class="w3-text-teal">
+              <i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <span class="w3-tag w3-teal w3-round">Jan 2023</span> -
+              <span class="w3-tag w3-teal w3-round">Jun 2023</span>
+            </h6>
+            <ul>
+              <li>Elevated IncedoPay’s alert system for reverse payment discrepancies and refined actual spend
+                calculations. Also rectified errors in payment file processing for accurate error messaging.</li>
+              <li>Received formal training on React and AWS cloud infrastructure, resulting in successful certifications
+                on the same. Later was deployed on IncedoPay Payments System.</li>
+              <li>Technologies Used: React, AWS Cloud, .NET, RabbitMQ, MySql, C#.</li>
+            </ul>
+            <hr>
+          </div>
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16">
+            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects
+          </h2>
+          <div class="projects-grid">
+
+            <div>
+              <div class="project-card w3-card w3-white w3-padding">
+                <p><a href="https://yanishbansal.github.io/TicTacToe/#/menu">AI vs Human TicTacToe Game</a></p>
+              </div>
+            </div>
+
+            <div>
+              <div class="project-card w3-card w3-white w3-padding">
+                <p><a href="/ColorGame">Color guessing game</a></p>
+              </div>
+            </div>
+
+            <div>
+              <div class="project-card w3-card w3-white w3-padding">
+                <p><a href="/SimpleTodoList">Simple Todo list</a></p>
+              </div>
+            </div>
+
+            <div>
+              <div class="project-card w3-card w3-white w3-padding">
+                <p><a href="/TodoList">Authorized Todo List</a></p>
+              </div>
+            </div>
+
+            <div>
+              <div class="project-card w3-card w3-white w3-padding">
+                <p><a href="/pressanykey">Popping circles</a> (Press keys to see effect)</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="project-card w3-card w3-white w3-padding">
+                <p><a href="https://github.com/yanishbansal/FlappyBird">Flappy Bird Game </a>
+                  (Non Hosted, Unity Version)
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"></h5>
+            <p><a href="https://yanishbansal.github.io/TicTacToe/#/menu">AI vs Human TicTacToe Game </a></p>
+
+            <p><a href="/ColorGame">Color guessing game</a></p>
+            <p><a href="/pressanykey">Popping circles </a>(Press keys to see effect)</p>
+            <p><a href="/TodoList">Authorized Todo list with full end database support</a></p>
+            <p><a href="/SimpleTodoList">Simple Todo list</a></p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h6 class="w3-opacity"><b>Non hosted Projects</b></h6>
+            <p><a href="https://github.com/yanishbansal/Maze-Finder">Maze Path Finder</a></p>
+            <p><a href="https://github.com/yanishbansal/FlappyBird">Flappy Bird Game</a></p>
+            <hr>
+          </div>
+        </div> -->
+
+        <!-- downnnnnnnnnnnnnnnnnnnnnn-->
+
+        <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>College / Thapar Institute of Engineering & Technology </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019-2023</h6>
+            <p>Bachelor of Engineering in Computer Science & Engineering</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>High School</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
+            <p> 93.3% in Boards (PCM)</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Matric</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2017</h6>
+            <p>9.4 cgpa </p><br>
+          </div>
+        </div>
+
+        <!-- End Right Column -->
+      </div>
+
+      <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+  </div>
+
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+    <p>Find me on
+      <a href="https://www.linkedin.com/in/yanishbansal/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"
+          style="color: white; margin: 6px;"></i></a>
+
+    <p><i>Yanish Bansal</i> <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p>
+    </p>
+  </footer>
+
+</body>
+
+</html>
